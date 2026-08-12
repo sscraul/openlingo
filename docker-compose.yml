@@ -3,6 +3,7 @@ services:
     build: .
     restart: unless-stopped
     environment:
+      SERVICE_FQDN_APP_3000: ${SERVICE_FQDN_APP_3000}
       DATABASE_URL: postgresql://lingo:${POSTGRES_PASSWORD}@db:5432/lingo
       BETTER_AUTH_BASE_URL: ${BETTER_AUTH_BASE_URL}
       BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET}
